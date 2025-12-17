@@ -1,0 +1,47 @@
+2025-12-16 21:21:38,637 : INFO : root : Loading config.
+2025-12-16 21:21:38,909 : INFO : ConfigProcessor : Config spec file cache created: C:\Users\myzone\AppData\Local\Temp\config_spec.mpf_cache
+2025-12-16 21:21:38,909 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2025-12-16 21:21:38,911 : INFO : ConfigProcessor : Loading config from file C:\Users\myzone\mpf\Lib\site-packages\mpf\mpfconfig.yaml.
+2025-12-16 21:21:38,974 : INFO : ConfigProcessor : Loading config: C:\Users\myzone\mpf\Lib\site-packages\mpf\mpfconfig.yaml
+2025-12-16 21:21:38,974 : INFO : ConfigProcessor : Loading config from file C:\Users\myzone\Documents\Pinball-Project\config\config.yaml.
+2025-12-16 21:21:38,987 : INFO : ConfigProcessor : Loading config: C:\Users\myzone\Documents\Pinball-Project\config\config.yaml
+2025-12-16 21:21:38,988 : INFO : ConfigProcessor : Config file cache created: C:\Users\myzone\AppData\Local\Temp\af7efbb6e416e9bd9da177f0597b5e00.mpf_cache
+2025-12-16 21:21:39,346 : INFO : ConfigProcessor : Loading config from file C:\Users\myzone\mpf\Lib\site-packages\mpf\modes\attract\config\attract.yaml.
+2025-12-16 21:21:39,358 : INFO : ConfigProcessor : Loading config: C:\Users\myzone\mpf\Lib\site-packages\mpf\modes\attract\config\attract.yaml
+2025-12-16 21:21:39,358 : INFO : ConfigProcessor : Loading config from file C:\Users\myzone\Documents\Pinball-Project\modes\attract\config\attract.yaml.
+2025-12-16 21:21:39,369 : INFO : ConfigProcessor : Loading config: C:\Users\myzone\Documents\Pinball-Project\modes\attract\config\attract.yaml
+2025-12-16 21:21:39,370 : INFO : ConfigProcessor : Config file cache created: C:\Users\myzone\AppData\Local\Temp\cba6bda2de1d8e08a5a11df5222153e0.mpf_cache
+2025-12-16 21:21:39,370 : INFO : ConfigProcessor : Loading config from file C:\Users\myzone\mpf\Lib\site-packages\mpf\modes\game\config\game.yaml.
+2025-12-16 21:21:39,381 : INFO : ConfigProcessor : Loading config: C:\Users\myzone\mpf\Lib\site-packages\mpf\modes\game\config\game.yaml
+2025-12-16 21:21:39,381 : INFO : ConfigProcessor : Config file cache created: C:\Users\myzone\AppData\Local\Temp\7c93964ede6765401268ee77bc58f475.mpf_cache
+2025-12-16 21:21:39,383 : INFO : ConfigProcessor : Loading config from cache: C:\Users\myzone\AppData\Local\Temp\cba6bda2de1d8e08a5a11df5222153e0.mpf_cache
+2025-12-16 21:21:39,394 : INFO : ConfigProcessor : Loading config from file C:\Users\myzone\Documents\Pinball-Project\modes\base\config\base.yaml.
+2025-12-16 21:21:39,405 : INFO : ConfigProcessor : Loading config: C:\Users\myzone\Documents\Pinball-Project\modes\base\config\base.yaml
+2025-12-16 21:21:39,406 : INFO : ConfigProcessor : Config file cache created: C:\Users\myzone\AppData\Local\Temp\9fd8787540d63887b41d82dc27700fb3.mpf_cache
+2025-12-16 21:21:39,407 : INFO : Machine : Mission Pinball Framework Core Engine v0.80.0.dev8
+2025-12-16 21:21:39,407 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': False, 'configfile': ['config.yaml'], 'force_assets_load': False, 'platform_integration_test': False, 'jsonlogging': False, 'logfile': 'logs\\2025-12-16-21-21-38-mpf-myzone.log', 'pause': False, 'production': False, 'text_ui': False, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': 'virtual', 'syslog_address': None, 'full_logfile_path': 'C:\\Users\\myzone\\Documents\\Pinball-Project\\logs\\2025-12-16-21-21-38-mpf-myzone.log'}
+2025-12-16 21:21:39,407 : INFO : Machine : MPF path: C:\Users\myzone\mpf\Lib\site-packages\mpf
+2025-12-16 21:21:39,407 : INFO : Machine : Machine path: C:\Users\myzone\Documents\Pinball-Project
+2025-12-16 21:21:39,408 : INFO : Machine : Platform: win32
+2025-12-16 21:21:39,408 : INFO : Machine : Python executable location: C:\Users\myzone\mpf\Scripts\python.exe
+2025-12-16 21:21:39,408 : INFO : Machine : Python version: 3.14.2 (64-bit)
+2025-12-16 21:21:39,410 : ERROR : root : There is no current event loop in thread 'MainThread'.
+Traceback (most recent call last):
+  File "C:\Users\myzone\mpf\Lib\site-packages\mpf\commands\game.py", line 227, in __init__
+    self.machine = MachineController(vars(self.args), config)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\myzone\mpf\Lib\site-packages\mpf\core\machine.py", line 219, in __init__
+    self.clock = self._load_clock()
+                 ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\myzone\mpf\Lib\site-packages\mpf\core\machine.py", line 277, in _load_clock
+    clock = ClockBase(self)
+  File "C:\Users\myzone\mpf\Lib\site-packages\mpf\core\clock.py", line 67, in __init__
+    self.loop = self._create_event_loop()   # type: asyncio.AbstractEventLoop
+                ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\myzone\mpf\Lib\site-packages\mpf\core\clock.py", line 81, in _create_event_loop
+    return asyncio.get_event_loop()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\myzone\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 715, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+                       % threading.current_thread().name)
+RuntimeError: There is no current event loop in thread 'MainThread'.
